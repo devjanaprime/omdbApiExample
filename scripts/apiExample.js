@@ -14,7 +14,8 @@ $( document ).on( 'click', '#searchNow', function(){
       // successfully hit API
       console.log( 'successful API hit:', data );
       // show results
-      showResults( data.search );
+      // '.Search' is the array of movie objects returned by OMDB
+      showResults( data.Search );
     },
     statusCode: {
       404: function(){
@@ -25,6 +26,14 @@ $( document ).on( 'click', '#searchNow', function(){
   });
 }); // end click on search button
 
-var showResults( results ){
-  console.log( 'in showResults', results );
+var showResults = function( results ){
+  // console.log( 'in showResults', results );
+  // fields for each result: Year, Title, Poster (image URL)
+  // empty output div
+  $( '#outputDiv').empty();
+  // loop through results and display movies
+  for( var i = 0 ; i < results.length; i++ ){
+    $( '#outputDiv').append( '<p><b>' + results[ i ].Title + '</b> (' + results[ i ].Year + ')</p>' );
+    $( '#outputDiv').append( '<img src="' + results[ i ].Poster + '">' );
+  } // end for
 } // end showResults
