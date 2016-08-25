@@ -13,6 +13,8 @@ $( document ).on( 'click', '#searchNow', function(){
     success: function( data ){
       // successfully hit API
       console.log( 'successful API hit:', data );
+      // show results
+      showResults( data.search );
     },
     statusCode: {
       404: function(){
@@ -21,5 +23,8 @@ $( document ).on( 'click', '#searchNow', function(){
       } // end error
     }
   });
-  // show results
 }); // end click on search button
+
+var showResults( results ){
+  console.log( 'in showResults', results );
+} // end showResults
