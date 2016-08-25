@@ -27,7 +27,7 @@ $( document ).on( 'click', '#searchNow', function(){
 }); // end click on search button
 
 var showResults = function( results ){
-  // console.log( 'in showResults', results );
+  console.log( 'in showResults', results );
   // fields for each result: Year, Title, Poster (image URL)
   // empty output div
   $( '#outputDiv').empty();
