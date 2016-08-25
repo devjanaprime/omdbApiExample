@@ -1,7 +1,7 @@
 OMDB API Example
 ================
 
-In this project we'll use JQuery and Ajax to make a call to the OMDB (Open Movie DataBase) API. This will return a JSON file that we'll then use as an object array and display on the DOM.
+In this project we'll use JQuery and Ajax to make a call to the OMDB (Open Movie DataBase) API. This will return a JSON that we'll then use as an object array and display on the DOM.
 
 Once you've completed that, add some basic styling and make thigns look less sterile.
 
